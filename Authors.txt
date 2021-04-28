@@ -1,0 +1,68 @@
++---------------------------------------------------------------------+
+
+				K-DAYSI SHOPPING DATABASE WEBSITE
+
+	A Team Project by Travis Trotto, Esmond Chin, Michelle Gonzalez
+		CSC226		Prof. Minh Doan		Spring 2020
+
++---------------------------------------------------------------------+
+
+4 DATABASES: 
+
+product_details
+	has tables:
+
+1.	accounts:		contains CUSTOMER login information
+
+
+2.	adminaccounts: 		contains ADMIN login information
+
+
+3.	help_tickets: 		contains support ticket number and complaint as well as 				customer information.
+
+4.	product: 		contains products, their names, pictures and prices.
+
+5. 	orders:			keeps records of previous orders
+
+
+10 FUNCTIONS:
+
+
+1.  show products:	Read products from product table database, output into an html element that
+					includes css styles and add to cart button.
+
+2.	add to cart: 	add a product from product table in database into a new session called cart.
+		takes in quanitity
+		checks if item is already in cart
+		shows pop up if so.
+
+3. 	display cart:	outputs all items added to cart in a table, while calculating a total price
+
+
+4.	remove item:	unset a specific product in the session, removing it from the cart
+		shows pop up if successful
+
+5.	log in: 		after running a query with users submitted log ins AND password, they will be redirected 				 to dashboard page if a row is returned.
+
+6.	admin login 	login as admin, redirect to admin control interface called "dashboard"
+
+7.	log out:		destroy session, logging user out and redirect to homepage
+
+8.	create account:	check if username already exists, if not insert into the logins database.
+
+9.	submit ticket: 	customer can submit a paragraph, as well as their username, email and order number.
+		pop up if succesful or not
+
+10.	view ticket:	IF logged in as admin, run a query to dump ALL support tickets in a table
+					that preserves customer information
+
+11.	delete user:	IF logged in as admin, admin can delete a registered user by clicking a button that
+					runs a delete query	
+
+12.	mark solved: 	IF logged in as admin, admins can mark a support ticket as solved, or remove it 
+					by running a delete query
+
+13. display time:	display webstores server date and time for the user.
+
+14.	check out:	empty's cart, stores total, reports to database.
+
